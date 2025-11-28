@@ -1,0 +1,47 @@
+<!-- <div
+  *ngFor="
+    let color of colors;
+    let i = index;
+    let first = first;
+    let last = last
+  "
+>
+  <span
+    >{{ i }}, {{ first ? "I am first" : "" }} {{ last ? "I am last" : "" }}
+    {{ color }}</span
+  >
+</div> -->
+
+<!-- @for (color of colors; track color; let i = $index; let first = $first; let last
+= $last){
+<div>
+  <button (click)="currentColor = color">
+    {{ color }}
+  </button>
+</div>
+} @empty {
+<span>Empty array</span>
+} -->
+
+<!-- <div *ngIf="isShow; else emptyState">
+    <span>{{isShow}} I logged out because the value was true </span>
+</div>
+
+<button (click)="isShow = !isShow">click</button>
+
+<ng-template #emptyState>
+    <span>{{isShow}} I logged out because the value was false</span>
+</ng-template> -->
+
+<!-- <div [ngSwitch]="currentColor">
+    <span *ngSwitchCase="'red'"> Selected color - red</span>
+    <span *ngSwitchCase="'blue'"> Selected color - blue</span>
+</div>
+ -->
+<h2 [myChangeColor]="colors">Directives</h2>
+
+<span *myIf="isShow">{{isShow}}</span>
+
+<br />
+
+<button (click)="isShow = !isShow">Click me!</button>

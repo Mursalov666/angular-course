@@ -6,6 +6,7 @@ import { DirectivesPageComponent } from './directives/directives.component';
 import { ParentComponent } from './components/lifecycle/components/parent/parent.component';
 import { PipesComponent } from './components/pipes/components/pipes/pipes.component';
 import { FormsComponent } from './forms/components/forms/forms.component';
+import { DecoratorsPageComponent } from './decorators/component/decorators-page/decorators-page.component';
 
 export const routes: Routes = [
   { path: 'calculator', component: MyCalculatorComponent },
@@ -19,12 +20,12 @@ export const routes: Routes = [
   },
 
   { path: 'life-cycle', component: ParentComponent },
-
   { path: 'directives', component: DirectivesPageComponent },
-
   { path: 'pipes', component: PipesComponent },
-
   { path: 'forms', component: FormsComponent },
+
+  // 👇 Добавили ЭТО
+  { path: 'decorators-page', component: DecoratorsPageComponent },
 
   { path: '', redirectTo: 'calculator', pathMatch: 'full' },
 

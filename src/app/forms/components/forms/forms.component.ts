@@ -37,9 +37,9 @@ interface TemplateFormI {
 
 @Component({
   selector: 'app-forms',
-  standalone: true,
   templateUrl: './forms.component.html',
   styleUrls: ['./forms.component.scss'],
+  standalone: true,
   imports: [ReactiveFormsModule, CommonModule, FormsModule, RateComponent],
 })
 export class FormsComponent implements OnInit {
@@ -56,6 +56,7 @@ export class FormsComponent implements OnInit {
     return this.fbForm.get('skills') as FormArray
   }
 
+  public customForm!: FormGroup;
   public fbForm!: FormGroup;
 
   public myForm = new FormGroup({
@@ -76,19 +77,19 @@ export class FormsComponent implements OnInit {
     conformPassword
   );
   
-  ngOnInit(): void {
-    this.fbForm = this._fb.group({
-      name: ['Ragif'],
-      skills: this._fb.array([]),
-    });
-  }
-  
-  public customForm = this._fb.group(
-    rate:[2]
-  )
+ngOnInit(): void {
+  this.fbForm = this._fb.group({
+    name: ['Ragif'],
+    skills: this._fb.array([]),
+  });
+
+  this.customForm = this._fb.group({
+    rate: [4]
+  });
+}
 
   public ratesOptions: RateOptions = {
-    rates: 5,
+    rates: 10,
     text: 'Ocenite nash kurs po Angular'
   }
 

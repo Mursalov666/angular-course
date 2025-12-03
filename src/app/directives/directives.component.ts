@@ -8,7 +8,7 @@ import { MyIfDirectiveDirective } from "./my-if-directive.directive";
     standalone: true,
     templateUrl: './directives.component.html',
     styleUrls:['./directives.component.scss'],
-    imports: [NgFor, NgIf, NgSwitch, NgSwitchCase, NgStyle, DirectiveModule, MyIfDirectiveDirective]
+    imports: [DirectiveModule, MyIfDirectiveDirective]
 })
 
 export class DirectivesPageComponent {

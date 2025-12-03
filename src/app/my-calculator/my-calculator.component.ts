@@ -30,7 +30,7 @@ enum CalcModifiers {
 
 @Component({
   selector: 'app-my-calculator',
-  imports: [FormsModule, NgFor, CommonModule, RouterOutlet],
+  imports: [FormsModule, NgFor, CommonModule],
   templateUrl: './my-calculator.component.html',
   styleUrls: ['./my-calculator.component.scss'],
 })

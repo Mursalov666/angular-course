@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
@@ -10,6 +11,8 @@ export interface RateOptions {
     selector: 'app-rate',
     templateUrl: './rate.component.html',
     styleUrls:['./rate.component.scss'],
+    standalone: true,
+    imports:[CommonModule],
     providers: [
         {
             provide: NG_VALUE_ACCESSOR,

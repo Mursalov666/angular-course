@@ -7,9 +7,10 @@ import { ParentComponent } from './components/lifecycle/components/parent/parent
 import { PipesComponent } from './components/pipes/components/pipes/pipes.component';
 import { FormsComponent } from './forms/components/forms/forms.component';
 import { DecoratorsPageComponent } from './decorators/component/decorators-page/decorators-page.component';
+import { LeaveGuard } from './leave.guard';
 
 export const routes: Routes = [
-  { path: 'calculator', component: MyCalculatorComponent },
+  { path: 'calculator', component: MyCalculatorComponent, canDeactivate:[LeaveGuard] },
 
   {
     path: 'object-list',
@@ -24,7 +25,6 @@ export const routes: Routes = [
   { path: 'pipes', component: PipesComponent },
   { path: 'forms', component: FormsComponent },
 
-  // 👇 Добавили ЭТО
   { path: 'decorators-page', component: DecoratorsPageComponent },
 
   { path: '', redirectTo: 'calculator', pathMatch: 'full' },

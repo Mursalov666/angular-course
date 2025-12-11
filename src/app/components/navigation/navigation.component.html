@@ -1,9 +1,25 @@
 <ul>
-    <li><a [routerLink]="['/calculator']" routerLinkActive="active" >Calculator</a></li>
-    <li><a [routerLink]="['/object-list']" routerLinkActive="active" >Object List</a></li>
-    <li><a [routerLink]="['/directives']" routerLinkActive="active">Directives</a></li>
-    <li><a [routerLink]="['/life-cycle']" routerLinkActive="active">Lifecycle</a></li>
+  <div class="navbar">
+    <li>
+      <a [routerLink]="['/calculator']" routerLinkActive="active">Calculator</a>
+    </li>
+    <li>
+      <a [routerLink]="['/object-list']" routerLinkActive="active"
+        >Object List</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/directives']" routerLinkActive="active">Directives</a>
+    </li>
+    <li>
+      <a [routerLink]="['/life-cycle']" routerLinkActive="active">Lifecycle</a>
+    </li>
     <li><a [routerLink]="['/pipes']" routerLinkActive="active">Pipes</a></li>
     <li><a [routerLink]="['/forms']" routerLinkActive="active">Forms</a></li>
-    <li><a [routerLink]="['/decorators-page']" routerLinkActive="active">Decorators</a></li>
+    <li>
+      <a [routerLink]="['/decorators-page']" routerLinkActive="active"
+        >Decorators</a
+      >
+    </li>
+  </div>
 </ul>

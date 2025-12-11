@@ -1,16 +1,17 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject } from "rxjs";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-    providedIn : 'root'
+  providedIn: 'root',
 })
 export class UserService {
+  public isUserLogged = new BehaviorSubject<boolean>(false);
 
-    public isUserLogged = new BehaviorSubject<boolean>(false)
-    
-    constructor() { }
-    
-    public login(): void{
-        this.isUserLogged.next(true)
-    }
+  public Stringsubject$ = new BehaviorSubject<string>('one');
+
+  constructor() {}
+
+  public login(): void {
+    this.isUserLogged.next(true);
+  }
 }

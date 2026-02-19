@@ -16,6 +16,9 @@ export interface TodoItemI {
   imports: [ViewBarComponent, CommonModule, TodoItemComponent],
 })
 export class ViewFooComponent {
+
+  public isShow = false;
+
   public todoArr: TodoItemI[] = [
     {
       text: 'Foo1',

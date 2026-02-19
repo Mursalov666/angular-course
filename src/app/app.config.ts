@@ -8,6 +8,7 @@ import { PipesComponent } from './components/pipes/components/pipes/pipes.compon
 import { FormsComponent } from './forms/components/forms/forms.component';
 import { DecoratorsPageComponent } from './decorators/component/decorators-page/decorators-page.component';
 import { LeaveGuard } from './leave.guard';
+import { ViewFooComponent } from './components/view-styles/components/view-foo/view-foo.component';
 
 export const routes: Routes = [
   { path: 'calculator', component: MyCalculatorComponent, canDeactivate:[LeaveGuard] },
@@ -19,7 +20,9 @@ export const routes: Routes = [
         (m) => m.OBJECT_LIST_ROUTES
       ),
   },
-
+  {
+    path: 'view-foo', component: ViewFooComponent
+  },
   { path: 'life-cycle', component: ParentComponent },
   { path: 'directives', component: DirectivesPageComponent },
   { path: 'pipes', component: PipesComponent },
